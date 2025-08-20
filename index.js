@@ -31,8 +31,9 @@ async function generarPagina() {
 
 
   fs.writeFileSync("index.html", pagina);
-  console.log("✅ Página generada en index.html");
+  console.log("Página generada en index.html");
 }
 
 generarPagina();
+
 
