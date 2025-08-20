@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Antioqueñidad</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5dc; 
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #228B22; 
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .subheader {
+            background-color: #90EE90; 
+            color: #333;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .section-title {
+            background-color: #f5f5dc;
+            color: #228B22;
+            padding: 10px 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background-color: #228B22; /* Verde */
+        }
+        .history-text {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            border: 5px solid white;
+            object-fit: cover;
+            transition: transform 0.3s, opacity 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img.active {
+            width: 500px;
+            height: auto;
+            opacity: 1;
+            transform: scale(1);
+            z-index: 1;
+            margin: 10px;
+            border-radius: 10px;
+            border: 5px solid white;
+        }
+
+        .gallery img:not(.active) {
+            opacity: 0.5;
+            transform: scale(0.8);
+        }
+        .gallery-title {
+            background-color: #f5f5dc; 
+            color: #228B22;
+            padding: 10px 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .gallery-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background-color: #228B22; /* Verde */
+        }
+
+
+        .food-item {
+            display: inline-block;
+            color: #228B22;
+            flex-direction: row;
+            width: 17%;
+            align-items: normal;
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            vertical-align: top;
+            margin: 2.5%;
+        }
+        .food-item p {
+            color: #333;
+        }
+        .food-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .box img {
+            width: 20%;
+            height: 20%;
+            border-radius: 10px;
+            margin-bottom: 0px;
+            margin-left: 40%;
+        }
+        .legends-songs {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .legends-songs div {
+            width: 30%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 0px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .legends-songs img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .legends-songs p {
+            color: #333;
+            margin-top: 0;
+        }
+        .legends-songs h3 {
+            color: #228B22;
+            margin-top: 0;
+            font-style: italic;
+        }   
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        
+        @media (max-width: 768px) {
+            .food-item {
+                width: 48%;
+            }
+            .legends-songs div {
+                width: 100%;
+            }
+            .legends-songs {
+                flex-direction: column;
+            }
+
+            .gallery img {
+                width: 100%; 
+            }
+            .gallery img.active {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz Día de la Antioqueñidad</h1>
+    </header>
+
+    <div class="subheader">
+        <h2>Antioquía Flower Icon</h2>
+        <p>¡Tierra de la Feria de las Flores!</p>
+    </div>
+
+    <section>
+        <h2 class="section-title">Historia</h2>
+        <div class="history-text">
+            <p>La historia del Día de la Antioqueñidad y la Feria de las Flores está intrínsicamente ligada.  Si bien no hay una fecha específica de origen para un "Día de la Antioqueñidad" oficial,  la Feria de las Flores, que se celebra anualmente en Medellín,  es la celebración más importante que representa la cultura, tradición y orgullo antioqueño.  Sus raíces se remontan a mediados del siglo XX,  con la idea de promover el turismo y mostrar la riqueza cultural de la región.  Inicialmente,  la feria se centraba en las flores y su cultivo,  pero con el tiempo se expandió para incluir desfiles, conciertos, eventos culturales y gastronómicos,  englobando así una amplia representación de la identidad antioqueña. La fecha se suele celebrar en agosto. </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Lugares Emblemáticos</h2>
+        <div class="gallery">
+            <img src="./resources/1(4).png" alt="Imagen 1" class="active">
+            <img src="./resources/2(4).png" alt="Imagen 2">
+            <img src="./resources/3(3).png" alt="Imagen 3">
+            <img src="./resources/4(1).png" alt="Imagen 4">
+            <img src="./resources/5.png" alt="Imagen 5">
+        </div>
+        <script>
+            const galleryImages = document.querySelectorAll('.gallery img');
+            let currentIndex = 0;
+
+            galleryImages.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    galleryImages[currentIndex].classList.remove('active');
+                    currentIndex = index;
+                    galleryImages[currentIndex].classList.add('active');
+                });
+            });
+        </script>
+    </section>
+
+
+    <section>
+        <h2 class="section-title">Comidas Típicas</h2>
+        <div class="food-items">
+            <div class="food-item">
+                <img src="./resources/6.png" alt="Bandeja Paisa">
+                <h3>Bandeja Paisa</h3>
+                <p>Plato representativo de Antioquia, con frijoles, arroz, chicharrón, huevo, chorizo, etc.</p>
+            </div>
+            <div class="food-item">
+                <img src="./resources/7.png" alt="Arepas">
+                <h3>Arepas</h3>
+                <p>Masa de maíz cocida, base de muchos desayunos y comidas antioqueñas.</p>
+            </div>
+            <div class="food-item">
+                <img src="./resources/8.png" alt="Calentado">
+                <h3>Calentado</h3>
+                <p>Comida típica hecha con arroz, frijoles y otros ingredientes, común en el desayuno.</p>
+            </div>
+            <div class="food-item">
+                <img src="./resources/9.png" alt="Ajiaco">
+                <h3>Ajiaco Antioqueño</h3>
+                <p>Sopa tradicional a base de pollo, papa, y otros ingredientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Feria de las Flores</h2>
+        <div class="box">
+            <img src="./resources/10.png" alt="Feria de las Flores">
+            <h3>Celebración Cultural</h3>
+            <p>La Feria de las Flores es una celebración anual que muestra la belleza de las flores, la cultura y las tradiciones antioqueñas a través de desfiles, conciertos, muestras gastronómicas, y más. </p>
+        </div>
+    </section>
+
+
+    <section>
+        <h2 class="section-title">Leyendas y Música</h2>
+        <div class="legends-songs">
+            <div>
+                <h3>La Patasola</h3>
+                <img src="./resources/11.png" alt="Imagen Leyenda 1">
+                <p>Su leyenda cuenta que fue infiel a su esposo, quien, en un ataque de ira, la mutiló cortándole una pierna. Ahora, como alma en pena, busca a hombres solitarios, a menudo transformándose en una mujer hermosa para atraerlos y luego revelar su verdadera y monstruosa forma, con el fin de atormentarlos o incluso matarlos</p>
+            </div>
+            <div>
+                <h3>El Móhan</h3>
+                <img src="./resources/12.png" alt="Imagen Leyenda 2">
+                <p>Se le describe como un ser corpulento, cubierto de pelo y con una larga barba, que habita en ríos y lagunas, y se le atribuyen tanto travesuras como actos de protección de la naturaleza.</p>
+            </div>
+            <div>
+                <h3>El Hombre Caíman</h3>
+                <img src="./resources/13.png" alt="Imagen Leyenda 3">
+                <p>Cuenta la historia de un hombre que, por espiar mujeres mientras se bañaban en el río, busca la ayuda de un brujo para transformarse en caimán y pasar desapercibido. Sin embargo, la transformación no es completa, resultando en un ser mitad hombre, mitad caimán, que aterroriza la zona</p>
+            </div>
+            <div>
+                <h3>El Silbón</h3>
+                <img src="./resources/14.png" alt="Imagen Leyenda 4">
+                <p>Cuenta la historia de un hombre condenado a vagar por los llanos como un espíritu, silbando de forma peculiar y provocando terror. Su silbido es engañoso: si parece cerca, está lejos, y viceversa</p>
+            </div>
+        </div>
+        <div class="legends-songs">
+            <div>
+                <h3>El perdedor - Maluma</h3>
+                <audio controls>
+                    <source src="./resources/Maluma - El Perdedor (Cover Audio) - MalumaVEVO.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div>
+                <h3>Rio - J Balvin</h3>
+                <audio controls>
+                    <source src="./resources/J Balvin - Rio (Letra_Lyrics) - Latin Buzz.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div>
+                <h3>Gato Malo - Karol G</h3>
+                <audio controls>
+                    <source src="./resources/KAROL G & Nathy Peluso - GATO MALO (LetraLyrics).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div>
+                <h3>Besame - Manuel Turizo</h3>
+                <audio controls>
+                    <source src="./resources/Valentino Y Manuel Turizo - Bésame (Letra).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Hecho por Loren Sofía</p>
+    </footer>
+</body>
+</html>
